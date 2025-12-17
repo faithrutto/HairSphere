@@ -1,0 +1,7 @@
+{
+  "name": "HairSphere",
+  "description": "A comprehensive, peach-themed hair growth and maintenance application featuring routine planning, progress tracking, and AI-powered hair diagnostics.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
