@@ -14,7 +14,7 @@ export const AIAdvisor: React.FC = () => {
   ]);
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  
+
   // Safe check for API key presence to toggle UI state
   const hasApiKey = typeof process !== 'undefined' && process.env && process.env.API_KEY;
 
@@ -80,20 +80,20 @@ export const AIAdvisor: React.FC = () => {
       {/* Messages Area */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-white">
         {messages.map((msg) => (
-          <div 
-            key={msg.id} 
+          <div
+            key={msg.id}
             className={`flex items-start gap-3 max-w-[85%] ${msg.role === 'user' ? 'ml-auto flex-row-reverse' : ''}`}
           >
-            <div 
+            <div
               className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 
                 ${msg.role === 'user' ? 'bg-charcoal text-white' : 'bg-peach-100 text-peach-600'}`}
             >
               {msg.role === 'user' ? <User size={16} /> : <Bot size={16} />}
             </div>
-            <div 
+            <div
               className={`p-4 rounded-2xl text-sm leading-relaxed whitespace-pre-wrap
-                ${msg.role === 'user' 
-                  ? 'bg-charcoal text-white rounded-tr-none' 
+                ${msg.role === 'user'
+                  ? 'bg-charcoal text-white rounded-tr-none'
                   : 'bg-peach-50 text-charcoal border border-peach-100 rounded-tl-none'}`}
             >
               {msg.text}
@@ -102,7 +102,7 @@ export const AIAdvisor: React.FC = () => {
         ))}
         {isLoading && (
           <div className="flex items-start gap-3">
-             <div className="w-8 h-8 rounded-full bg-peach-100 text-peach-600 flex items-center justify-center">
+            <div className="w-8 h-8 rounded-full bg-peach-100 text-peach-600 flex items-center justify-center">
               <Bot size={16} />
             </div>
             <div className="bg-peach-50 p-4 rounded-2xl rounded-tl-none border border-peach-100">
@@ -139,7 +139,7 @@ export const AIAdvisor: React.FC = () => {
             onClick={handleSend}
             disabled={!input.trim() || isLoading}
             className="bg-peach-300 text-white p-3 rounded-xl hover:bg-peach-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-md shadow-peach-200"
-          >
+          >a
             <Send size={20} />
           </button>
         </div>

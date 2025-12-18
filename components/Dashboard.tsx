@@ -16,7 +16,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
   return (
     <div className="space-y-6">
       <header className="mb-8">
-        <h2 className="text-3xl font-bold text-charcoal">Good Morning, Jane!</h2>
+        <h2 className="text-3xl font-bold text-charcoal">Good Morning, Client!</h2>
         <p className="text-softbrown mt-1">Ready to nourish your hair today?</p>
       </header>
 
@@ -32,7 +32,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
         </div>
 
         <div className="bg-white rounded-2xl p-6 shadow-sm border border-peach-100 flex flex-col justify-between">
-           <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center justify-between mb-4">
             <h3 className="font-semibold text-charcoal">Routine Progress</h3>
             <Clock className="text-peach-400" />
           </div>
@@ -42,7 +42,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
               <span>{Math.round(progressPercentage)}%</span>
             </div>
             <div className="h-2 w-full bg-peach-100 rounded-full overflow-hidden">
-              <div 
+              <div
                 className="h-full bg-peach-400 rounded-full transition-all duration-500"
                 style={{ width: `${progressPercentage}%` }}
               />
@@ -51,7 +51,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
         </div>
 
         <div className="bg-white rounded-2xl p-6 shadow-sm border border-peach-100 cursor-pointer hover:border-peach-300 transition-colors" onClick={() => onNavigate('routine')}>
-           <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center justify-between mb-4">
             <h3 className="font-semibold text-charcoal">Next Wash Day</h3>
             <Calendar className="text-peach-400" />
           </div>
@@ -67,7 +67,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
             <h3 className="text-xl font-bold text-charcoal">Today's Routine</h3>
             <button onClick={() => onNavigate('routine')} className="text-sm text-peach-600 font-semibold hover:underline">View Full Week</button>
           </div>
-          
+
           <div className="space-y-4">
             {tasks.length > 0 ? (
               tasks.map((task) => (
@@ -94,9 +94,9 @@ export const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
         <div className="bg-white rounded-2xl p-6 shadow-sm border border-peach-100 flex flex-col">
           <h3 className="text-xl font-bold text-charcoal mb-4">Daily Tip</h3>
           <div className="flex-1 rounded-xl overflow-hidden relative mb-4 group cursor-pointer" onClick={() => onNavigate('knowledge')}>
-            <img 
-              src="https://picsum.photos/400/300?grayscale" 
-              alt="Hair tip" 
+            <img
+              src="https://picsum.photos/400/300?grayscale"
+              alt="Hair tip"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-4">
@@ -104,7 +104,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
               <p className="text-white font-medium">Sleep with a satin bonnet to reduce friction and breakage.</p>
             </div>
           </div>
-          <button 
+          <button
             onClick={() => onNavigate('ai-advisor')}
             className="w-full py-3 rounded-xl bg-charcoal text-white font-medium hover:bg-black transition-colors flex items-center justify-center gap-2"
           >
